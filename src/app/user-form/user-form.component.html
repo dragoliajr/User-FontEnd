@@ -1,0 +1,15 @@
+<div>
+    <form [formGroup]= "userForm">
+        <input name ="uname" type = "text" placeholder="Enter User Name"  formControlName="uname"/>
+        <span *ngIf = "uname && uname?.errors?.['minlength']  ">min error </span>
+        <span *ngIf = "uname && uname?.errors?.['maxlength'] ">max error </span><br>
+        <input name ="pword" type = "text" placeholder="Enter Password"  formControlName="pword"/>
+        <span *ngIf = "pword && pword?.errors?.['minlength']  ">min error </span>
+        <span *ngIf = "pword && pword?.errors?.['maxlength'] ">max error </span><br>
+
+        <button type = "submit">Submit</button>
+    </form>
+</div>
+    
+        
+
